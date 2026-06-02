@@ -1,0 +1,3 @@
+# Mermaid diagram sources are documentation, not a primary language.
+# Keeps GitHub's language statistics representative of a Markdown-led repo.
+*.mmd linguist-documentation

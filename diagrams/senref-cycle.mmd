@@ -1,0 +1,11 @@
+graph TD
+    S[Sense<br>Ingest, monitor, detect, extract] --> M
+    M[Model<br>Structure, map, simulate, scenario] --> D
+    D[Decide<br>Score, qualify, recommend, prioritize] --> R
+    R[Reflect<br>Evaluate, update, refine, learn] --> S
+    
+    %% Escalation mapping
+    D -.->|Escalation triggers concentrate here| E[Escalation Protocols]
+    
+    %% Persistence mapping
+    R -.->|Persistence updates| WM[(Shared Context<br>Working Memory)]

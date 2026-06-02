@@ -1,0 +1,15 @@
+stateDiagram-v2
+    state "Draft (confidence: low)" as Draft
+    state "Active (confidence: medium)" as ActiveMed
+    state "Active (confidence: high)" as ActiveHigh
+    state "Deprecated" as Deprecated
+    
+    [*] --> Draft
+    Draft --> ActiveMed : First real engagement
+    ActiveMed --> ActiveHigh : 3+ engagements with iterative feedback
+    ActiveMed --> ActiveMed : Evolution protocol\nengage → observe → correct → codify → version bump
+    ActiveHigh --> ActiveHigh : Evolution protocol\nengage → observe → correct → codify → version bump
+    
+    ActiveMed --> Deprecated : Superseded
+    ActiveHigh --> Deprecated : Superseded
+    Deprecated --> [*]

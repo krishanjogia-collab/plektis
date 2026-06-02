@@ -1,0 +1,7 @@
+graph LR
+    E[Ephemeral<br>Nothing - in-memory only<br>e.g., Conversation context, graphology]
+    S[Session-Persistent<br>Within one engagement<br>e.g., Project memory, working docs]
+    EN[Engagement-Persistent<br>Full lifecycle + reference<br>e.g., Working .md files, SQLite DB]
+    C[Cross-Engagement Persistent<br>Institutional knowledge<br>e.g., Skill files v1→v3.2, reference architectures]
+
+    E --> S --> EN --> C

@@ -1,0 +1,20 @@
+graph TD
+    subgraph Tiers[Escalation Tiers]
+        T1[Tier 1: Mandatory<br>Irreversible impact<br>e.g., Capital commitment, external communication]
+        T2[Tier 2: Advisory<br>Significant impact<br>e.g., Data anomalies, thesis conflicts]
+        T3[Tier 3: Informational<br>Awareness<br>e.g., Status updates, completed deliverables]
+        T1 --- T2 --- T3
+    end
+
+    subgraph SenRef[SenRef Cycle Phases]
+        S[Sense]
+        M[Model]
+        D[Decide]
+        R[Reflect]
+    end
+
+    S -->|Mostly| T3
+    M -->|When conflicts detected| T2
+    D -->|Escalation concentration| T1
+    D --> T2
+    R -->|Proposing updates| T3

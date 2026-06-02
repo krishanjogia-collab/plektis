@@ -1,0 +1,14 @@
+graph TB
+    L5[Layer 5: Integrated Deployment<br>Running as a node]
+    L4[Layer 4: First-Party Products<br>Bundled software]
+
+    subgraph Platform[The Platform]
+        L3[Layer 3: Marketplace<br>Shared configurations and ecosystem]
+        L2[Layer 2: SDK<br>The build kit]
+        L1[Layer 1: Reference Model<br>The protocol - Open Source]
+    end
+    
+    L1 --- L2
+    L2 --- L3
+    L3 --- L4
+    L4 --- L5

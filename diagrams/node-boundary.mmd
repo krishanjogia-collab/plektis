@@ -1,0 +1,29 @@
+graph LR
+    subgraph External[External Environment]
+        CE[Client Environment]
+        DE[Data Environment]
+        RE[Regulatory Environment]
+        EF[External Forces]
+    end
+
+    subgraph Node[The Node Boundary]
+        D[Driver<br>Human Operator]
+        
+        subgraph Machine
+            SenRef[SenRef Cycle]
+        end
+        
+        IL[Interaction Layer]
+        WM[(Working Memory)]
+        
+        D <--> IL
+        Machine <--> IL
+        IL <--> WM
+    end
+
+    CE -->|Mandate, Feedback| Node
+    DE -->|Intelligence| Node
+    RE -->|Constraints| Node
+    EF -->|Signals| Node
+    
+    Node -->|Deliverables, Recommendations| CE

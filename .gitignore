@@ -1,0 +1,51 @@
+# === OS files ===
+.DS_Store
+Thumbs.db
+
+# === Build scripts (Anti-Gravity automation) ===
+*.py
+
+# === Environment and secrets ===
+.env
+.env.*
+*.token
+*.key
+
+# === Proprietary skill files (Layer 4 IP, NEVER publish) ===
+# The SDK ships with example skills only. Real domain skill files are proprietary.
+sdk/skills/succession-intelligence/
+sdk/skills/transactions-advisory/
+sdk/skills/commercial-architecture/
+sdk/skills/engagement-playbook/
+sdk/skills/capability-assessment/
+sdk/skills/tom-design/
+SKILL_SuccessionIntelligence*
+SKILL_TransactionsAdvisory*
+SKILL_CommercialArchitecture*
+SKILL_EngagementPlaybook*
+SKILL_CapabilityAssessment*
+SKILL_TOMDesign*
+SKILL_FoundersCompass*
+
+# === Internal project management (NEVER publish) ===
+# These patterns protect against accidentally copying internal files into the repo
+strategy-brief*
+*strategy-brief*
+SESSION_LOG*
+AG_HANDOFF*
+AG_REVIEW*
+SKILL_AntiGravity*
+SME_PROFILE*
+KRISH_JOGIA*
+*naming*research*
+*DRAFT_*
+
+# === Node modules / build artifacts ===
+node_modules/
+dist/
+.next/
+.vercel/
+
+# === IDE ===
+.vscode/
+.idea/
