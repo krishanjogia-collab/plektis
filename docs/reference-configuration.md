@@ -24,13 +24,13 @@ The machine side of this node is not one AI tool. It is an ensemble of five AI p
 |---|---|---|---|
 | **Strategist** | Claude (Projects/Chat) | Strategy formulation, narrative design, positioning, stakeholder communication. The agent the driver thinks with. Operates in extended conversation with deep context retention. | Sense, Model, Decide |
 | **Architect** | Claude Code (terminal) | Technical architecture, specification writing, code architecture, quality review. Produces design specs and reviews implementer output. Does not write implementation code unless explicitly directed. | Model, Decide, Reflect |
-| **Implementer** | Google Gemini (AI Studio) | High-volume execution against specs. Code production, file migrations, formatting, bulk operations. Operates against handoff documents with defined acceptance criteria. | Model, Decide |
+| **Implementer** | Google Antigravity 2.0 | High-volume execution against specs. Code production, file migrations, formatting, bulk operations. Operates against handoff documents with defined acceptance criteria. | Model, Decide |
 | **Researcher** | Google Gemini (Deep Research / Chat) | Landscape analysis, competitive research, naming viability, technical investigation. Produces structured research findings. Also used for image generation, mockups, and visual design exploration. | Sense |
 | **Grounding Engine** | Google Gemini (via API) | Real-time search grounding for live data enrichment. Powers the Sense phase of products that require external data (e.g., entity discovery and market intelligence enrichment). | Sense |
 
 ### Why Multiple Agents
 
-A single AI tool cannot fill every role effectively. Reasoning engines optimised for deep strategic conversation (Claude Projects) are different from tools optimised for code execution (Claude Code), which are different from tools optimised for high-volume production (Gemini). The protocol's agent-agnostic design means each capability slot is filled by whatever tool does it best. The coordination grammar (WORKBOARD.md, HANDOFF_LOG.md, review/verify cycles) provides the connective tissue.
+A single AI tool cannot fill every role effectively. Reasoning engines optimised for deep strategic conversation (Claude Projects) are different from tools optimised for code execution (Claude Code), which are different from tools optimised for high-volume implementation (Google Antigravity). The protocol's agent-agnostic design means each capability slot is filled by whatever tool does it best. The coordination grammar (WORKBOARD.md, HANDOFF_LOG.md, review/verify cycles) provides the connective tissue.
 
 ---
 
@@ -42,7 +42,7 @@ Each capability slot from the protocol (Section 6.5) is provisioned with a speci
 |---|---|---|---|
 | **Reasoning Engine** | Claude (Projects/Chat) + Claude Code | Strategic thinking happens in Claude Projects. Technical architecture happens in Claude Code. Both are reasoning engines, differentiated by context and interface. | GPT-4o, Gemini Advanced, Llama (local), any frontier model |
 | **Code Execution** | Claude Code | Builds prototypes, runs commands, manages git, executes technical tasks in the terminal. | Cursor, GitHub Copilot, Windsurf, Gemini Code Assist |
-| **Implementation Engine** | Google Gemini (via AI Studio) | Executes against specs produced by the architect. High throughput for migrations, formatting, bulk file operations. | Any second AI agent. Could be a second Claude Code instance, Cursor, or a human developer. |
+| **Implementation Engine** | Google Antigravity 2.0 | Executes against specs produced by the architect. High throughput for migrations, formatting, bulk file operations. | Any second AI agent. Could be a second Claude Code instance, Cursor, or a human developer. |
 | **Search & Grounding** | Google Gemini (API with search grounding) | Powers entity discovery and enrichment in products that need live data. Web search, news monitoring, entity resolution. | Perplexity API, Tavily, Brave Search API, Bing API |
 | **Research & Analysis** | Google Gemini (Deep Research) | Landscape analysis, competitive intelligence, naming viability checks, technical investigation. Produces structured findings documents. | Perplexity, Claude with web search, manual research |
 | **Visual Design** | Google Gemini (Chat) | Image generation, UI mockups, visual design exploration, presentation assets. | Midjourney, DALL-E, Figma with AI, Canva |
@@ -67,11 +67,11 @@ Strategist (Claude Chat)
   ↓ (strategy decisions, positioning, narrative)
 Architect (Claude Code)
   ↓ (specs, handoff briefs, design decisions)
-Implementer (Gemini)
+Implementer (Antigravity)
   ↓ (built artifacts, delivery notes)
 Architect (Claude Code)
   ↓ (/review cycle, fix list)
-Implementer (Gemini)
+Implementer (Antigravity)
   ↓ (fixes applied)
 Architect (Claude Code)
   ↓ (/verify, push to repo)
